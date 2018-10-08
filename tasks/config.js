@@ -27,3 +27,5 @@ export const images = {
   src: `${ASSET_ROOT}/images/**/*.*`,
   dest: `${DEST_ROOT}/images`
 };
+
+export const isProd = process.env.NODE_ENV === 'production';

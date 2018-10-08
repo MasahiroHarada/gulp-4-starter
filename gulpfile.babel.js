@@ -1,7 +1,7 @@
 import { series, parallel, watch } from 'gulp';
 
 import { reload, serve } from './tasks/server';
-import { styles } from './tasks/styles';
+import { styles, styleLint } from './tasks/styles';
 import { scripts } from './tasks/scripts';
 import { templates } from './tasks/templates';
 import { images } from './tasks/images';

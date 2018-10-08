@@ -1,1 +1,3 @@
-const sample = () => console.log('Sample');
+window.onload = () => {
+  document.getElementById('title').innerHTML = 'Hello, gulp';
+};
