@@ -1,0 +1,26 @@
+@import url('https://unpkg.com/normalize.css@8.0.0/normalize.css');
+
+@import 'var';
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.title {
+  color: $title-color;
+  font-family: $title-font;
+  font-size: 3rem;
+  margin: 0 0 3rem 0;
+}
+
+.logo {
+  margin: 0;
+  img {
+    width: 8rem;
+  }
+}
