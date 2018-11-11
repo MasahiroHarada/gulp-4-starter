@@ -4,6 +4,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import cleancss from 'gulp-clean-css';
 import plumber from 'gulp-plumber';
 import gulpStylelint from 'gulp-stylelint';
+import changed from 'gulp-changed-in-place';
 
 import { sass as config, isProd } from './config';
 
@@ -25,13 +26,14 @@ export function sass() {
  * Stylelint
  */
 export function stylelint() {
-  return gulp.src(config.src).pipe(
-    gulpStylelint({
+  return gulp
+    .src(config.src)
+    .pipe(changed({ firstPass: true }))
+    .pipe(gulpStylelint({
       failAfterError: isProd,
       reporters: [{ formatter: 'verbose', console: true }],
       syntax: 'scss'
-    })
-  );
+    }));
 }
 
 export const styles = gulp.series(stylelint, sass);
