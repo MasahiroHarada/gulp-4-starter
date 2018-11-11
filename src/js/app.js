@@ -1,3 +1,5 @@
+import greeting from './greeting';
+
 window.onload = () => {
-  document.getElementById('title').innerHTML = 'Hello, gulp';
+  document.getElementById('title').innerText = greeting;
 };

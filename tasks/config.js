@@ -7,6 +7,7 @@ export const sass = {
 };
 
 export const scripts = {
+  srcRoot: `${ASSET_ROOT}/js`,
   src: `${ASSET_ROOT}/js/**/*.js`,
   dest: `${DEST_ROOT}/js`,
   babelrc: {
